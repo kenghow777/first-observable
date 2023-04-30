@@ -20,6 +20,7 @@ const observable = new Observable((subscriber) => {
   // เมื่อ complete ถูกเรียกแล้ว จะไม่มีการส่งค่าใด ๆ กลับไป
   subscriber.complete();
 
+  // ค่าพวกนี้ จะไม่ถูกส่งกลับไป เนื่องจาก complete ถูกเรียกใช้แล้ว
   subscriber.next('Hello');
   subscriber.next('World');
 });
