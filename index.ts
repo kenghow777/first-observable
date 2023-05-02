@@ -14,7 +14,7 @@ const observer = {
 };
 
 const observable = new Observable((subscriber) => {
-  subscriber.next('Hello');
+  subscriber.next('World');
   subscriber.next('World');
 
   // เมื่อ complete ถูกเรียกแล้ว จะไม่มีการส่งค่าใด ๆ กลับไป
@@ -25,4 +25,5 @@ const observable = new Observable((subscriber) => {
   subscriber.next('World');
 });
 
+// observable เรียกใช้ subscribe
 observable.subscribe(observer);
